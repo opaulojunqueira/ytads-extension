@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "version": "0.0.1",
+    "name": "YouTube Ads",
+    "description": "YouTube Ads - Adicione Ads em sua live com essa extensão automatizada.",
+    "author": "Instagram: @opaulojunqueira",
+    "permissions": ["storage", "scripting", "activeTab"],
+    "content_scripts": [
+        {
+          "matches": ["https://studio.youtube.com/*"],
+          "js": ["./public/script.js"]
+        }
+      ],
+    "action": {
+        "default_title": "YouTube Ads - Painel",
+        "default_popup": "./public/index.html"
+    },
+    "icons": {
+        "16": "./public/icons/icon.png",
+        "48": "./public/icons/icon.png",
+        "128": "./public/icons/icon.png"
+    }
+}
